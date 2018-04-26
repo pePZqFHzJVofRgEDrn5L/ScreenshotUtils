@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC79D02F-62DE-4DEE-89EC-998F41545C48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ScreenshotUtils</RootNamespace>
+    <AssemblyName>ScreenshotUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.0\lib\net40-client\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaptureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaptureForm.designer.cs">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ColorBoxDesginer.cs" />
+    <Compile Include="ControlExt\ComboBox\ControlProperties.cs" />
+    <Compile Include="ControlExt\ComboBox\GripBounds.cs" />
+    <Compile Include="ControlExt\ComboBox\ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ComboBox.Designer.cs">
+      <DependentUpon>ComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ComboBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ComboBoxItem.Designer.cs">
+      <DependentUpon>ComboBoxItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ListControl.Designer.cs">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\RoundControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\RoundControl.Designer.cs">
+      <DependentUpon>RoundControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ScrollBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\ScrollBar.Designer.cs">
+      <DependentUpon>ScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\NativeMethods.cs" />
+    <Compile Include="ControlExt\ComboBox\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ComboBox\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ImageProcessBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ImageProcessBox.designer.cs">
+      <DependentUpon>ImageProcessBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ColorBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ColorBox.designer.cs">
+      <DependentUpon>ColorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\TextInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\TextInput.designer.cs">
+      <DependentUpon>TextInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ToolButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlExt\ToolButton.designer.cs">
+      <DependentUpon>ToolButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlExt\ToolButtonDesigner.cs" />
+    <Compile Include="Model\KeyModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StickyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StickyForm.designer.cs">
+      <DependentUpon>StickyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\FormUtil.cs" />
+    <Compile Include="Utils\IniFile.cs" />
+    <Compile Include="Utils\MouseHook.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Utils\Win32.cs" />
+    <EmbeddedResource Include="CaptureForm.resx">
+      <DependentUpon>CaptureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ComboBox\ComboBox.resx">
+      <DependentUpon>ComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ComboBox\ListControl.resx">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ComboBox\RoundControl.resx">
+      <DependentUpon>RoundControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ComboBox\ScrollBar.resx">
+      <DependentUpon>ScrollBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ImageProcessBox.resx">
+      <DependentUpon>ImageProcessBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ColorBox.resx">
+      <DependentUpon>ColorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\TextInput.resx">
+      <DependentUpon>TextInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlExt\ToolButton.resx">
+      <DependentUpon>ToolButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StickyForm.resx">
+      <DependentUpon>StickyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\config.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.cur" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
