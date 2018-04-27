@@ -5,4 +5,6 @@
 
 只保留了基础的截图功能
 
-可以直接下载发布的dll:https://github.com/pePZqFHzJVofRgEDrn5L/ScreenshotUtils/releases
+#### 下载
+
+下载:https://github.com/pePZqFHzJVofRgEDrn5L/ScreenshotUtils/releases
